@@ -1,0 +1,37 @@
+{
+  "name": "wink-encrypt",
+  "version": "1.0.0",
+  "description": "Encrypt & decrypt text from punctuation, funky, doesn't it?",
+  "author": "Stan Chollet <stanislas.chollet@gmail.com> (https://stan.life)",
+  "license": "MIT",
+  "keywords": [
+    "encrypt",
+    "punctuation",
+    "wink"
+  ],
+  "main": "dist/node/wink-encrypt.js",
+  "scripts": {
+    "test": "jest",
+    "checkstyle": "prettier --list-different src/**.js",
+    "build-browser": "webpack",
+    "build-node": "babel src --out-dir dist/node --ignore spec.js,test.js",
+    "fmt": "prettier --write src/**.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsunammis/wink-encrypt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsunammis/wink-encrypt/issues"
+  },
+  "homepage": "https://github.com/tsunammis/wink-encrypt#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^20.0.4",
+    "prettier": "^1.6.1",
+    "webpack": "^3.5.5"
+  }
+}
