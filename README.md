@@ -1,6 +1,7 @@
-# :wink: Encrypt
+![:wink:](./doc/wink.png)
+# :wink: Decrypt and encrypt text from punctuation
 
-Encrypt & decrypt text from punctuation, funky, doesn't it?
+Decrypt & encrypt text from punctuation, funky, doesn't it?
 
 ## Why ?
 
