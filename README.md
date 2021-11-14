@@ -21,9 +21,9 @@ So, I created this small tool to decrypt text from punctuation, and vice versa.
     ```js
     const winkEncrypt = require('wink-encrypt')
 
-    console.log(`Hello Mar... 😉  == ${winkEncrypt.encodeString('Hello Mar... 😉')}`)
+    console.log(`Welcome to Wink Encrypt == ${winkEncrypt.encodeString('Welcome to Wink Encrypt')}`)
 
-    console.log(`:--!!.;!.;?!!!.;?!!!.;-!."?!!.:"!!.:"--!!.;-!!!!."--!."--!."--!."?!!.)))))(;;;:?!!.)))))(',;;;"-?! == ${winkEncrypt.decodeString(':--!!.;!.;?!!!.;?!!!.;-!."?!!.:"!!.:"--!!.;-!!!!."--!."--!."--!."?!!.)))))(;;;:?!!.)))))(\',;;;"-?!')}`)
+    console.log(`:"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?! == ${winkEncrypt.decodeString(':"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?!')}`)
     ```
 
 ## Use into a browser
@@ -38,8 +38,9 @@ So, I created this small tool to decrypt text from punctuation, and vice versa.
         <meta charset="UTF-8">
         <script type="text/javascript" src="wink-encrypt.min.js"></script>
         <script type="text/javascript">
-            console.log(`Hello Mar... 😉  == ${winkEncrypt.encodeString('Hello Mar... 😉')}`)
-            console.log(`:--!!.;!.;?!!!.;?!!!.;-!."?!!.:"!!.:"--!!.;-!!!!."--!."--!."--!."?!!.)))))(;;;:?!!.)))))(',;;;"-?! == ${winkEncrypt.decodeString(':--!!.;!.;?!!!.;?!!!.;-!."?!!.:"!!.:"--!!.;-!!!!."--!."--!."--!."?!!.)))))(;;;:?!!.)))))(\',;;;"-?!')}`)
+            console.log(`Welcome to Wink Encrypt == ${winkEncrypt.encodeString('Welcome to Wink Encrypt')}`)
+
+            console.log(`:"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?! == ${winkEncrypt.decodeString(':"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?!')}`)
         </script>
     </head>
     <body>Hello</body>

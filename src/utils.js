@@ -15,7 +15,7 @@ export function codeToPunctuation(code, encodedCode) {
     return encodedCode
   }
 
-  var appendEncodedCode = function(encodedCode, code, divisor, char) {
+  var appendEncodedCode = function (encodedCode, code, divisor, char) {
     var numberOfChar = Math.floor(code / divisor)
     if (numberOfChar > 0) {
       encodedCode += compileString(char, numberOfChar)

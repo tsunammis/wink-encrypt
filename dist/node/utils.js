@@ -1,15 +1,16 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.encodeChar = encodeChar;
-exports.decodeChar = decodeChar;
 exports.codeToPunctuation = codeToPunctuation;
-exports.punctuationToCode = punctuationToCode;
 exports.compileString = compileString;
-function encodeChar(char) {
-  return codeToPunctuation(char.charCodeAt(0));
+exports.decodeChar = decodeChar;
+exports.encodeChar = encodeChar;
+exports.punctuationToCode = punctuationToCode;
+
+function encodeChar(_char) {
+  return codeToPunctuation(_char.charCodeAt(0));
 }
 
 function decodeChar(encodedChar) {
@@ -25,11 +26,13 @@ function codeToPunctuation(code, encodedCode) {
     return encodedCode;
   }
 
-  var appendEncodedCode = function appendEncodedCode(encodedCode, code, divisor, char) {
+  var appendEncodedCode = function appendEncodedCode(encodedCode, code, divisor, _char2) {
     var numberOfChar = Math.floor(code / divisor);
+
     if (numberOfChar > 0) {
-      encodedCode += compileString(char, numberOfChar);
+      encodedCode += compileString(_char2, numberOfChar);
     }
+
     return encodedCode;
   };
 
@@ -78,41 +81,43 @@ function punctuationToCode(encodedCode, code) {
   }
 
   var encodedCodeArray = encodedCode.split('');
-  var char = encodedCodeArray.shift();
 
-  if (char === ')') {
+  var _char3 = encodedCodeArray.shift();
+
+  if (_char3 === ')') {
     code += 10000;
-  } else if (char === '(') {
+  } else if (_char3 === '(') {
     code += 5000;
-  } else if (char === "'") {
+  } else if (_char3 === "'") {
     code += 1000;
-  } else if (char === ',') {
+  } else if (_char3 === ',') {
     code += 500;
-  } else if (char === ';') {
+  } else if (_char3 === ';') {
     code += 100;
-  } else if (char === ':') {
+  } else if (_char3 === ':') {
     code += 50;
-  } else if (char === '"') {
+  } else if (_char3 === '"') {
     code += 25;
-  } else if (char === '-') {
+  } else if (_char3 === '-') {
     code += 10;
-  } else if (char === '?') {
+  } else if (_char3 === '?') {
     code += 5;
-  } else if (char === '!') {
+  } else if (_char3 === '!') {
     code += 1;
   }
 
   return punctuationToCode(encodedCodeArray.join(''), code);
 }
 
-function compileString(char, number) {
+function compileString(_char4, number) {
   if (!Number.isFinite(number) || number < 0) {
     return '';
   }
 
   var output = '';
+
   for (var i = 0; i < number; i++) {
-    output += char;
+    output += _char4;
   }
 
   return output;

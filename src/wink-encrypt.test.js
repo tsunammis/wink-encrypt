@@ -1,9 +1,9 @@
 const { encodeString, decodeString } = require('./wink-encrypt')
 
 describe('Method encodeString', () => {
-  test('Should be equals to :-?!.;-!.;-.;?!.;-!.;-?!!.;-!!!!."?!!.:"!!.:"--!!.;-!!!!.;?.;-.;!', () => {
-    expect(encodeString('Bonjour Marine')).toBe(
-      ':-?!.;-!.;-.;?!.;-!.;-?!!.;-!!!!."?!!.:"!!.:"--!!.;-!!!!.;?.;-.;!'
+  test('Should be equals to :"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?!', () => {
+    expect(encodeString('Welcome to Wink Encrypt')).toBe(
+      ':"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?!'
     )
   })
 
@@ -15,12 +15,12 @@ describe('Method encodeString', () => {
 })
 
 describe('Method decodeString', () => {
-  test('Should be equals to "Bonjour Marine"', () => {
+  test('Should be equals to "Welcome to Wink Encrypt"', () => {
     expect(
       decodeString(
-        ':-?!.;-!.;-.;?!.;-!.;-?!!.;-!!!!."?!!.:"!!.:"--!!.;-!!!!.;?.;-.;!'
+        ':"-!!.;!.;?!!!.:"--!!!!.;-!.;?!!!!.;!."?!!.;-?!.;-!."?!!.:"-!!.;?.;-.;?!!."?!!.:-?!!!!.;-.:"--!!!!.;-!!!!.;--!.;-!!.;-?!'
       )
-    ).toBe('Bonjour Marine')
+    ).toBe('Welcome to Wink Encrypt')
   })
 
   test('Should be equals to "Awesome! Love it! 👍"', () => {
